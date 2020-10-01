@@ -1,0 +1,113 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap452/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font/css/all.min.css">
+    <link rel="stylesheet" href="plugin/datatables.css">
+    <link rel="stylesheet" href="mouhamed.css">
+
+</head>
+<body class="">
+    <div class="">
+        <div class="row">
+            <div class="col-md-3">
+
+        </div>
+            <div class="col-md-8">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Vente</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="m-1">
+                        <table class="table" id="table_vente">
+                            <thead>
+                                <th>Client</th>
+                                <th>Matin</th>
+                                <th>Soir</th>
+                                <th>Retour</th>
+                                <th>Versement</th>
+                                <th>Compte Client</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    <script src="jquery/jquery.js"></script>
+
+    <script src="bootstrap452/js/bootstrap.js"></script>
+    <script src="plugin/datatables.js"></script>
+    <script>
+        var data_vente = [
+            [
+                "Tiger Nixon",
+                "15 kl ",
+                "6 kl",
+                "1 kl 1lb",
+                "4 000 ",
+                "500",
+                "2"
+            ],
+            [
+                "Zozo Nixon",
+                "6 kl ",
+                "18 kl",
+                "2 kl 1lb",
+                "12 000 ",
+                "-900",
+                "3"
+            ],[
+                "Krouma",
+                "25 kl ",
+                " kl",
+                "1 kl",
+                "8 5000 ",
+                "3 000",
+                "4"
+            ],
+        ]
+        jQuery.fn.extend({
+            editor_datatable: function() {
+                return this.each(function() {
+                    this.checked = true;
+                });
+            },
+
+        });
+        $( document ).ready(function() {
+            $('#table_vente').DataTable({
+                data:data_vente,
+
+            })
+        });
+
+
+    </script>
+
+</body>
+</html>
